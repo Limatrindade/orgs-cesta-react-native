@@ -1,6 +1,6 @@
-import { View, Text, Image, StyleSheet, SafeAreaView } from 'react-native';
+import { View, Text, Image, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native';
 
-export default function Detalhes({ name, nameFarm, description, price, logo }) {
+export default function Detalhes({ name, nameFarm, description, price, logo, Botao }) {
     return (
         <SafeAreaView>
             <Text style={styles.name}>{name}</Text>
@@ -12,6 +12,10 @@ export default function Detalhes({ name, nameFarm, description, price, logo }) {
                 {description}
             </Text>
             <Text style={styles.price}>{price}</Text>
+
+            <TouchableOpacity style={styles.botao}>
+                <Text style={styles.textBotao}>{Botao}</Text>
+            </TouchableOpacity>
         </SafeAreaView>
     );
 }
@@ -48,5 +52,18 @@ const styles = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         marginTop: 8
+    },
+    botao: {
+        marginTop: 16,
+        backgroundColor: "#2A9F85",
+        paddingVertical: 16,
+        borderRadius: 6
+    },
+    textBotao: {
+        color: "#fff",
+        fontWeight: "bold",
+        textAlign: "center",
+        fontSize: 16,
+        lineHeight: 26
     }
 });
