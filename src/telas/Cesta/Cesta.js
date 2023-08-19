@@ -3,14 +3,14 @@ import { StyleSheet, SafeAreaView, View } from "react-native";
 import Topo from "./componentes/Topo";
 import Detalhes from "./componentes/Detalhes";
 
-export default function Cesta() {
+export default function Cesta({ topo, detalhes }) {
     return (
         <SafeAreaView>
 
-          <Topo/>
+          <Topo {...topo} />
           
           <View style={styles.cesta}>
-            <Detalhes/>
+            <Detalhes {...detalhes} />
           </View>
           
         </SafeAreaView>

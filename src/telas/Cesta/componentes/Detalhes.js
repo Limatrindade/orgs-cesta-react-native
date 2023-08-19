@@ -1,19 +1,17 @@
 import { View, Text, Image, StyleSheet, SafeAreaView } from 'react-native';
 
-import logoFarm from '../../../../assets/logo.png';
-
-export default function Detalhes() {
+export default function Detalhes({ name, nameFarm, description, price, logo }) {
     return (
         <SafeAreaView>
-            <Text style={styles.name}>Cesta de Verduras</Text>
+            <Text style={styles.name}>{name}</Text>
             <View style={styles.farm}>
-              <Image source={logoFarm} style={styles.imageFarm}/>
-              <Text style={styles.nameFarm}>Matheus Lima Farm</Text>
+              <Image source={logo} style={styles.imageFarm}/>
+              <Text style={styles.nameFarm}>{nameFarm}</Text>
             </View>
             <Text style={styles.description}>
-                Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha
+                {description}
             </Text>
-            <Text style={styles.price}>R$ 40,00</Text>
+            <Text style={styles.price}>{price}</Text>
         </SafeAreaView>
     );
 }

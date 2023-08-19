@@ -5,11 +5,11 @@ import topoImage from '../../../../assets/topo.png';
 const width = Dimensions.get('screen').width;
 
 
-export default function Topo() {
+export default function Topo({ title }) {
     return (
         <SafeAreaView>
             <Image source={topoImage} style={styles.topo} />
-            <Text style={styles.title}>Detalhe da cesta</Text>
+            <Text style={styles.title}>{title}</Text>
         </SafeAreaView>
     );
 }
