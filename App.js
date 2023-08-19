@@ -1,6 +1,6 @@
 import { StatusBar, SafeAreaView } from 'react-native';
 
-import Cesta from './src/telas/Cesta';
+import Cesta from './src/telas/Cesta/Cesta';
 
 export default function App() {
   return (
@@ -11,11 +11,3 @@ export default function App() {
   );
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
